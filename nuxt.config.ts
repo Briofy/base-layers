@@ -1,5 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 
+import customConfig from "./custom.config";
+
 export default defineNuxtConfig({
   ssr: true,
   app: {
@@ -15,6 +17,11 @@ export default defineNuxtConfig({
           href: "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css",
         },
       ],
+    },
+  },
+  runtimeConfig: {
+    config: {
+      ...customConfig as any,
     },
   },
   modules: [

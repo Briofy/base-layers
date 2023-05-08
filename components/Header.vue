@@ -75,7 +75,7 @@
             {{ extraLinkItem.title }}
           </NuxtLink>
 
-          <CompanyMegaMenu />
+          <CompanyMegaMenu v-if="headerConfig.megaMenu" />
 
           <LocaleTheme />
 
@@ -110,6 +110,8 @@
 <script setup lang="ts">
 import { search } from "../composables/state";
 
+const headerConfig = useRuntimeConfig().config.header;
+
 const localepath = useLocalePath();
 const userData = ref<User | unknown>();
 const searchInput = ref();
@@ -132,8 +134,5 @@ onBeforeMount(() => {
 });
 
 // Links beside dark mode button
-const extraLinks = ref<Menu[]>([
-  { title: "Pricing", link: "/pricing" },
-  { title: "Help", link: "/help" },
-]);
+const extraLinks = headerConfig.menu
 </script>
