@@ -16,14 +16,15 @@
           </button> -->
 
           <NuxtLink :to="localepath('/')" class="flex me-4">
-            <img
+            <NuxtImg
               class="md:h-20 md:w-20 h-16 w-16 dark:hidden"
-              src="../public/img/h-logo.svg"
+              :src="headerConfig.logo"
               alt="Trader4 logo"
             />
-            <img
+            <NuxtImg
               class="md:h-20 md:w-20 h-16 w-16 hidden dark:block"
-              src="../public/img/h-logo-dark.svg"
+              :src="headerConfig.darkLogo"
+
               alt="Trader4 logo"
             />
             <!-- <span

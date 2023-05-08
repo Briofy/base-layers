@@ -5,7 +5,7 @@
         <!-- Links -->
         <div
           class="lg:mx-auto"
-          v-for="(footerItem, footerIndex) in footerLinks"
+          v-for="(footerItem, footerIndex) in footerConfig.footerLinks"
         >
           <h2 class="mb-6 text-sm font-semibold text-gray-900 dark:text-white">
             {{ footerItem.title }}
@@ -31,17 +31,17 @@
             :to="localepath('/')"
             class="flex items-center mb-4 text-2xl font-semibold text-gray-900 lg:mb-0 dark:text-white"
           >
-            <img
+            <NuxtImg
               class="block md:m-0 mx-auto dark:hidden"
               width="100"
               height="100"
-              src="../public/img/logo-text.svg"
+              :src="footerConfig.logo"
             />
-            <img
+            <NuxtImg
               class="md:m-0 mx-auto hidden dark:block"
               width="100"
               height="100"
-              src="../public/img/logo-text-dark.svg"
+              :src="footerConfig.darkLogo"
             />
           </NuxtLink>
           <form action="#" class="flex w-full max-w-sm lg:ms-auto">
@@ -210,6 +210,8 @@
 
 <script setup lang="ts">
 const localepath = useLocalePath();
+const footerConfig = useRuntimeConfig().config.footer;
+
 const productsLinks = ref([
   { title: "Marketplace", link: "/marketplace" },
   { title: "Bridge", link: "/bridge" },
@@ -275,86 +277,7 @@ const familyLinks = ref([
   },
 ]);
 
-const footerLinks = ref([
-  {
-    title: "Quick Access",
-    links: [
-      { title: "About", link: "/about" },
-      { title: "Contact", link: "/contact" },
-      { title: "Pricing", link: "/pricing" },
-      { title: "News", link: "/blog/news" },
-      { title: "Blog", link: "/blog" },
-      { title: "Careers", link: "/careers" },
-      { title: "Privacy Policy", link: "/privacy" },
-      { title: "Cookies Policy", link: "/cookies" },
-      { title: "Terms Of Service", link: "/terms" },
-    ],
-  },
-  {
-    title: "Products",
-    links: [
-      { title: "Marketplace", link: "/marketplace" },
-      { title: "Bridge", link: "/bridge" },
-      { title: "Bazaar", link: "/bazaar" },
-      { title: "Financial Engineering", link: "/financial-engineering" },
-      { title: "Algo Trading", link: "/algo-trading" },
-      { title: "Cloud Trading", link: "/cloud-trading" },
-      { title: "Trading Framework", link: "/cloud-trading" },
-      { title: "License System", link: "/license-system" },
-      { title: "Open API", link: "/open-api" },
-    ],
-  },
-  {
-    title: "Support",
-    links: [
-      { title: "F.A.Q", link: "/faq" },
-      { title: "Documentation", link: "/documentation" },
-      { title: "How To", link: "/how-to" },
-      { title: "API Docs", link: "/docs/api" },
-      {
-        title: "Status System",
-        link: "https://status.trader4.net",
-        target: "_blank",
-      },
-      { title: "Use Cases", link: "/use-cases" },
-      { title: "Brand Book", link: "/brand-book" },
-      { title: "DMCA", link: "/dmca" },
-      { title: "Do Not Sell My Info", link: "/do-not-sell-my-info" },
-    ],
-  },
-  {
-    title: "More",
-    links: [
-      { title: "Download Android", link: "/mobile/android" },
-      { title: "Download iOS", link: "/mobile/ios" },
-      { title: "Think and Grow Rich", link: "/think-and-grow-rich" },
-      { title: "Rich Dad Poor Dad", link: "/rich-dad-poor-dad" },
-      { title: "Open Source", link: "/open-source" },
-      { title: "#trader4", link: "/hashtag-trader4" },
-      { title: "Bug Bounty", link: "/bug-bounty" },
-      { title: "Disclaimer", link: "/disclaimer" },
-      { title: "CSR", link: "/csr" },
-    ],
-  },
-  {
-    title: "Our Family",
-    links: [
-      { title: "Briofy", link: "https://briofy.net", target: "_blank" },
-      { title: "Werify", link: "https://werify.net", target: "_blank" },
-      { title: "Bulutly", link: "https://bulutly.net", target: "_blank" },
-      { title: "AzPays", link: "https://azpays.net", target: "_blank" },
-      { title: "Streamfy", link: "https://streamfy.net", target: "_blank" },
-      { title: "Learnfy", link: "https://learnfy.net", target: "_blank" },
-      { title: "Mehrify", link: "https://mehrify.net", target: "_blank" },
-      { title: "Carefy", link: "https://carefy.net", target: "_blank" },
-      {
-        title: "More from Briofy",
-        link: "https://briofy.net/products",
-        target: "_blank",
-      },
-    ],
-  },
-]);
+
 </script>
 
 <style scoped></style>
