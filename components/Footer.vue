@@ -210,7 +210,7 @@
 
 <script setup lang="ts">
 const localepath = useLocalePath();
-const footerConfig = useRuntimeConfig().config.footer;
+const footerConfig = useAppConfig().config.footer;
 
 const productsLinks = ref([
   { title: "Marketplace", link: "/marketplace" },

@@ -1,7 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 
-import customConfig from "./custom.config";
-
 export default defineNuxtConfig({
   ssr: true,
   app: {
@@ -20,9 +18,7 @@ export default defineNuxtConfig({
     },
   },
   runtimeConfig: {
-    config: {
-      ...customConfig as any,
-    },
+
   },
   modules: [
     "@nuxtjs/tailwindcss",

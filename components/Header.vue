@@ -111,7 +111,7 @@
 <script setup lang="ts">
 import { search } from "../composables/state";
 
-const headerConfig = useRuntimeConfig().config.header;
+const headerConfig = useAppConfig().config?.header;
 
 const localepath = useLocalePath();
 const userData = ref<User | unknown>();
