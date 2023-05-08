@@ -1,6 +1,6 @@
 <template>
   <!-- Block start -->
-  <section class="bg-gray-50 dark:bg-gray-800 h-screen ">
+  <section class="bg-gray-50 dark:bg-gray-800 h-screen">
     <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
       <div class="mx-auto max-w-screen-sm text-center">
         <h1
@@ -40,7 +40,7 @@
                 </svg>
               </div>
               <input
-                class="block p-3 pl-10 w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                class="block p-3 pl-10 w-full text-sm text-gray-900 bg-white rounded border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                 placeholder="e.g. Flowbite, components"
                 type="email"
                 id="member_email"
@@ -49,7 +49,7 @@
             <div>
               <button
                 type="submit"
-                class="py-3 px-5 w-full text-sm font-medium text-center bg-blue-700 text-white rounded-lg cursor-pointer bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+                class="py-3 px-5 w-full text-sm font-medium text-center bg-blue-700 text-white rounded cursor-pointer bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
               >
                 Submit
               </button>
@@ -60,10 +60,10 @@
       <div class="grid gap-6 mt-8 lg:mt-12 sm:grid-cols-2 lg:grid-cols-4">
         <a
           href="#"
-          class="p-6 text-center bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:hover:bg-gray-700 dark:border-gray-700 hover:shadow-lg"
+          class="p-6 text-center bg-white rounded border border-gray-200 shadow-md dark:bg-gray-800 dark:hover:bg-gray-700 dark:border-gray-700 hover:shadow-lg"
         >
           <div
-            class="flex justify-center items-center mx-auto mb-4 w-10 h-10 rounded-lg bg-primary-100 dark:bg-primary-900 lg:h-12 lg:w-12"
+            class="flex justify-center items-center mx-auto mb-4 w-10 h-10 rounded bg-primary-100 dark:bg-primary-900 lg:h-12 lg:w-12"
           >
             <svg
               class="w-5 h-5 text-primary-600 dark:text-primary-400 lg:w-6 lg:h-6"
@@ -84,10 +84,10 @@
         </a>
         <a
           href="#"
-          class="p-6 text-center bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:hover:bg-gray-700 dark:border-gray-700 hover:shadow-lg"
+          class="p-6 text-center bg-white rounded border border-gray-200 shadow-md dark:bg-gray-800 dark:hover:bg-gray-700 dark:border-gray-700 hover:shadow-lg"
         >
           <div
-            class="flex justify-center items-center mx-auto mb-4 w-10 h-10 bg-teal-100 rounded-lg dark:bg-teal-900 lg:h-12 lg:w-12"
+            class="flex justify-center items-center mx-auto mb-4 w-10 h-10 bg-teal-100 rounded dark:bg-teal-900 lg:h-12 lg:w-12"
           >
             <svg
               class="w-5 h-5 text-teal-600 lg:w-6 lg:h-6 dark:text-teal-400"
@@ -108,10 +108,10 @@
         </a>
         <a
           href="#"
-          class="p-6 text-center bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:hover:bg-gray-700 dark:border-gray-700 hover:shadow-lg"
+          class="p-6 text-center bg-white rounded border border-gray-200 shadow-md dark:bg-gray-800 dark:hover:bg-gray-700 dark:border-gray-700 hover:shadow-lg"
         >
           <div
-            class="flex justify-center items-center mx-auto mb-4 w-10 h-10 bg-purple-100 rounded-lg dark:bg-purple-900 lg:h-12 lg:w-12"
+            class="flex justify-center items-center mx-auto mb-4 w-10 h-10 bg-purple-100 rounded dark:bg-purple-900 lg:h-12 lg:w-12"
           >
             <svg
               class="w-5 h-5 text-purple-600 dark:text-purple-400 lg:w-6 lg:h-6"
@@ -132,10 +132,10 @@
         </a>
         <a
           href="#"
-          class="p-6 text-center bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:hover:bg-gray-700 dark:border-gray-700 hover:shadow-lg"
+          class="p-6 text-center bg-white rounded border border-gray-200 shadow-md dark:bg-gray-800 dark:hover:bg-gray-700 dark:border-gray-700 hover:shadow-lg"
         >
           <div
-            class="flex justify-center items-center mx-auto mb-4 w-10 h-10 bg-green-100 rounded-lg dark:bg-green-900 lg:h-12 lg:w-12"
+            class="flex justify-center items-center mx-auto mb-4 w-10 h-10 bg-green-100 rounded dark:bg-green-900 lg:h-12 lg:w-12"
           >
             <svg
               class="w-5 h-5 text-green-600 dark:text-green-400 lg:w-6 lg:h-6"
@@ -162,6 +162,4 @@
   </section>
   <!-- Block end -->
 </template>
-<script lang="ts" setup>
-
-</script>
+<script lang="ts" setup></script>

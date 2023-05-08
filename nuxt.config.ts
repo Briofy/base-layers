@@ -1,7 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 
 export default defineNuxtConfig({
-  ssr:true,
+  ssr: true,
   app: {
     head: {
       meta: [
@@ -20,8 +20,8 @@ export default defineNuxtConfig({
   modules: [
     "@nuxtjs/tailwindcss",
     "@nuxt/devtools",
-    'nuxt-icon',
-    '@nuxt/image-edge',
+    "nuxt-icon",
+    "@nuxt/image-edge",
     [
       "@nuxtjs/color-mode",
       {
@@ -37,11 +37,25 @@ export default defineNuxtConfig({
         locales: [
           {
             code: "en",
+            iso: "en-US",
             file: "en.ts",
             dir: "ltr",
           },
           {
+            code: "tr",
+            iso: "tr-IS",
+            file: "tr.ts",
+            dir: "ltr",
+          },
+          {
+            code: "ar",
+            iso: "ar-UAE",
+            file: "ar.ts",
+            dir: "rtl",
+          },
+          {
             code: "fa",
+            iso: "fa-IR",
             file: "fa.ts",
             dir: "rtl",
           },
@@ -49,5 +63,4 @@ export default defineNuxtConfig({
       },
     ],
   ],
-  
 });

@@ -5,7 +5,7 @@
       <div
         class="p-4 w-full fixed bottom-0 z-50 right-0 max-w-xl h-full md:h-auto"
       >
-        <div class="relative bg-white rounded-lg shadow dark:bg-gray-800">
+        <div class="relative bg-white rounded shadow dark:bg-gray-800">
           <div class="p-5 text-sm font-light text-gray-500 dark:text-gray-400">
             <p class="mb-2">
               We use cookies, including third party cookies, for operational
@@ -29,7 +29,7 @@
             <button
               id="close-modal"
               type="button"
-              class="py-2 px-4 w-full text-sm font-medium text-center text-white rounded-lg bg-primary-700 sm:w-auto hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+              class="py-2 px-4 w-full text-sm font-medium text-center text-white rounded bg-primary-700 sm:w-auto hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
             >
               Personalize my choices
             </button>
@@ -39,14 +39,14 @@
               <button
                 id="block-cookies"
                 type="button"
-                class="py-2 px-4 w-full text-sm font-medium text-gray-500 bg-white rounded-lg border border-gray-200 sm:w-auto hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-primary-300 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600"
+                class="py-2 px-4 w-full text-sm font-medium text-gray-500 bg-white rounded border border-gray-200 sm:w-auto hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-primary-300 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600"
               >
                 Reject all
               </button>
               <button
                 id="accept-cookies"
                 type="button"
-                class="py-2 px-4 w-full text-sm font-medium text-center text-white rounded-lg bg-primary-700 sm:w-auto hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+                class="py-2 px-4 w-full text-sm font-medium text-center text-white rounded bg-primary-700 sm:w-auto hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
               >
                 Accept all
               </button>
