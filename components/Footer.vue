@@ -1,12 +1,9 @@
 <template>
   <footer class="bg-white dark:bg-gray-800 rounded">
     <div class="p-4 mx-auto lg:-10">
-      <div class="grid pt-4 grid-cols-2 lg:grid-cols-5">
+      <div class="md:flex grid justify-between p-4 grid-cols-2 lg:grid-cols-5">
         <!-- Links -->
-        <div
-          class="lg:mx-auto"
-          v-for="(footerItem, footerIndex) in footerConfig.footerLinks"
-        >
+        <div v-for="(footerItem, footerIndex) in footerConfig.footerLinks">
           <h2 class="mb-6 text-sm font-semibold text-gray-900 dark:text-white">
             {{ footerItem.title }}
           </h2>
@@ -276,8 +273,6 @@ const familyLinks = ref([
     target: "_blank",
   },
 ]);
-
-
 </script>
 
 <style scoped></style>
