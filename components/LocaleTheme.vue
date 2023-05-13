@@ -1,30 +1,31 @@
 <template>
   <div
-    class="rounded  justify-center flex dark:bg-gray-800 z-20 border-gray-200 dark:border-gray-700"
+    class="rounded justify-center flex dark:bg-gray-800 z-20 border-gray-200 dark:border-gray-700"
   >
-    <button
-      v-show="colorMode.preference === 'light'"
-      id="theme-toggle"
-      @click="colorMode.preference = 'dark'"
-      type="button"
-      class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded text-sm p-2.5 "
-    >
-      <Icon size="1.25rem" name="mdi:weather-night" />
-    </button>
-    <button
-      id="theme-toggle"
-      @click="colorMode.preference = 'light'"
-      v-show="colorMode.preference === 'dark'"
-      type="button"
-      class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded text-sm p-2.5"
-    >
-      <Icon
-        size="1.25rem"
-        name="mdi:weather-sunny"
+    <div v-show="!headerConfig.hideThemeSelector">
+      <button
+        v-show="colorMode.preference === 'light'"
+        id="theme-toggle"
+        @click="colorMode.preference = 'dark'"
+        type="button"
+        class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded text-sm p-2.5"
+      >
+        <Icon size="1.25rem" name="mdi:weather-night" />
+      </button>
+      <button
+        id="theme-toggle"
         @click="colorMode.preference = 'light'"
-      />
-    </button>
-
+        v-show="colorMode.preference === 'dark'"
+        type="button"
+        class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded text-sm p-2.5"
+      >
+        <Icon
+          size="1.25rem"
+          name="mdi:weather-sunny"
+          @click="colorMode.preference = 'light'"
+        />
+      </button>
+    </div>
     <div
       id="tooltip-settings"
       role="tooltip"
@@ -34,6 +35,7 @@
       <div class="tooltip-arrow" data-popper-arrow></div>
     </div>
     <button
+      v-show="!headerConfig.hideLanguageSelector"
       type="button"
       id="language-dropdown-toggle"
       data-dropdown-toggle="language-dropdown"
@@ -49,6 +51,7 @@
     <div
       class="hidden z-50 my-4 text-base list-none bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700"
       id="language-dropdown"
+      v-show="headerConfig.languageList.length > 1"
     >
       <ul class="py-1" role="none">
         <li v-for="(localeItem, localeIndex) in localeItems" :key="localeIndex">
@@ -80,29 +83,10 @@ import { Dropdown } from "flowbite";
 const switchLocalePath = useSwitchLocalePath();
 const colorMode = useColorMode();
 
+const headerConfig = useAppConfig().config?.header;
+
 // Locale List
-const localeItems = ref([
-  {
-    lang: "en",
-    flagSrc: "/img/icon/en.svg",
-    text: "English",
-  },
-  {
-    lang: "fa",
-    flagSrc: "/img/icon/ir.svg",
-    text: "Farsi",
-  },
-  {
-    lang: "ar",
-    flagSrc: "/img/icon/ar.svg",
-    text: "Arabic",
-  },
-  {
-    lang: "tr",
-    flagSrc: "/img/icon/tr.svg",
-    text: "Turkish",
-  },
-]);
+const localeItems = ref(headerConfig.languageList);
 
 const activeLocale = ref(
   localeItems.value.find((x) => x.lang === useI18n().locale.value) ??
