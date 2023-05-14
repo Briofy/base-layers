@@ -47,7 +47,7 @@ export default defineAppConfig({
       logo: "/img/briofy.png",
       darkLogo: "/img/briofy.png",
       menu: [],
-      megaMenu: false,
+      megaMenu: true,
       hideSearchBar: false,
       hideLanguageSelector: false,
       languageList: [
@@ -77,7 +77,7 @@ export default defineAppConfig({
         title: "Login",
         hideLoginButton: false,
         loginButtonClass:
-          "sm:px-4 py-1 rounded sm:border ps-2 border-blue-600 text-blue-600 dark:text-gray-200 ms-3 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-all",
+          " py-1 rounded  text-blue-600 dark:text-gray-200 ms-3 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-all",
         loginButtonIconName: "mdi:account-circle-outline",
       },
     } as IHeader,

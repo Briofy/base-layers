@@ -98,6 +98,7 @@
           <NuxtLink
             v-if="!userData"
             to="/auth/sign"
+            class="sm:px-4 sm:border border-blue-600 mx-2"
             :class="headerConfig.loginButton.loginButtonClass"
             v-show="!headerConfig.loginButton.hideLoginButton"
           >
