@@ -39,7 +39,11 @@
               :src="footerConfig.darkLogo"
             />
           </NuxtLink>
-          <form action="#" class="flex w-full max-w-sm lg:ms-auto max-h-12">
+          <form
+            action="#"
+            class="flex w-full max-w-sm lg:ms-auto max-h-12"
+            v-show="!footerConfig.hideEmailBox"
+          >
             <div class="relative w-full">
               <label
                 for="email"
@@ -49,7 +53,12 @@
               <div
                 class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none"
               >
-                <Icon name="mdi:email-outline" class="w-5 h-5 text-gray-400" />
+                <ClientOnly>
+                  <Icon
+                    name="mdi:email-outline"
+                    class="w-5 h-5 text-gray-400"
+                  />
+                </ClientOnly>
               </div>
               <input
                 type="email"
@@ -83,7 +92,9 @@
             <div
               class="flex flex-wrap items-center justify-center text-sm text-gray-500 lg:mb-0 dark:text-gray-400"
             >
-              <p v-html="footerConfig.partOf"></p>
+              <ClientOnly>
+                <p v-html="footerConfig.partOf"></p>
+              </ClientOnly>
             </div>
           </div>
           <div class="md:col-span-1 col-span-full">

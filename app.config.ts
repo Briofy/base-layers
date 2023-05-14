@@ -35,6 +35,7 @@ interface IFooter {
   copyRight: string;
   partOf: string;
   emailAPI: string;
+  hideEmailBox: boolean;
   socials: {
     icon: string;
     link: string;
@@ -57,28 +58,7 @@ export default defineAppConfig({
       megaMenu: true,
       hideSearchBar: false,
       hideLanguageSelector: false,
-      languageList: [
-        {
-          lang: "en",
-          flagSrc: "/img/icon/en.svg",
-          text: "English",
-        },
-        {
-          lang: "fa",
-          flagSrc: "/img/icon/ir.svg",
-          text: "Farsi",
-        },
-        {
-          lang: "ar",
-          flagSrc: "/img/icon/ar.svg",
-          text: "Arabic",
-        },
-        {
-          lang: "tr",
-          flagSrc: "/img/icon/tr.svg",
-          text: "Turkish",
-        },
-      ],
+      languageList: [],
       hideThemeSelector: false,
       loginButton: {
         title: "Login",
@@ -93,45 +73,20 @@ export default defineAppConfig({
       logo: "/img/briofy.png",
       darkLogo: "/img/briofy.png",
       footerLinks: [],
+      hideEmailBox: false,
       emailAPI: "https://api.briofy.net/api/Email/ContactUs",
       copyRight: `<span>© 2017-2023
                           <a href="https://trader4.net" class="hover:underline">Trader4</a>.
                           All Rights Reserved.</span
                         >`,
-      partOf: `<p>
-      Proudly Part Of
+      partOf: `<p> Proudly Part Of
       <a
         href="https://briofy.net"
         target="_blank"
         rel="external"
         class="hover:underline font-semibold"
-        >Briofy</a
-      >
-      Family
-    </p>`,
-      socials: [
-        {
-          icon: "mdi:twitter-circle",
-          link: "https://twitter.com/briofyapp",
-        },
-
-        {
-          icon: "mdi:instagram",
-          link: "https://www.instagram.com/briofyapp",
-        },
-        {
-          icon: "mdi:linkedin",
-          link: "https://www.linkedin.com/company/briofyapp",
-        },
-        {
-          icon: "mdi:youtube",
-          link: "https://www.youtube.com/channel/UCQ1Z6X0Z4ZqZ5Z4XZ2Z2Z2A",
-        },
-        {
-          icon: "mdi:github",
-          link: "https://github.com/Briofy",
-        },
-      ],
+        >Briofy</a> Family </p>`,
+      socials: [],
     } as IFooter,
   },
 });
