@@ -43,8 +43,8 @@
     >
       <img
         class="h-5 w-5 rounded mt-0.5"
-        :src="activeLocale.flagSrc"
-        :alt="activeLocale.text"
+        :src="activeLocale?.flagSrc"
+        :alt="activeLocale?.text"
       />
     </button>
     <!-- Dropdown -->
