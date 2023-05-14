@@ -32,6 +32,13 @@ interface IFooter {
       target?: string;
     }[];
   }[];
+  copyRight: string;
+  partOf: string;
+  emailAPI: string;
+  socials: {
+    icon: string;
+    link: string;
+  }[];
 }
 
 export default defineAppConfig({
@@ -86,6 +93,45 @@ export default defineAppConfig({
       logo: "/img/briofy.png",
       darkLogo: "/img/briofy.png",
       footerLinks: [],
+      emailAPI: "https://api.briofy.net/api/Email/ContactUs",
+      copyRight: `<span>© 2017-2023
+                          <a href="https://trader4.net" class="hover:underline">Trader4</a>.
+                          All Rights Reserved.</span
+                        >`,
+      partOf: `<p>
+      Proudly Part Of
+      <a
+        href="https://briofy.net"
+        target="_blank"
+        rel="external"
+        class="hover:underline font-semibold"
+        >Briofy</a
+      >
+      Family
+    </p>`,
+      socials: [
+        {
+          icon: "mdi:twitter-circle",
+          link: "https://twitter.com/briofyapp",
+        },
+
+        {
+          icon: "mdi:instagram",
+          link: "https://www.instagram.com/briofyapp",
+        },
+        {
+          icon: "mdi:linkedin",
+          link: "https://www.linkedin.com/company/briofyapp",
+        },
+        {
+          icon: "mdi:youtube",
+          link: "https://www.youtube.com/channel/UCQ1Z6X0Z4ZqZ5Z4XZ2Z2Z2A",
+        },
+        {
+          icon: "mdi:github",
+          link: "https://github.com/Briofy",
+        },
+      ],
     } as IFooter,
   },
 });
