@@ -24,7 +24,6 @@
             <NuxtImg
               class="md:h-20 md:w-20 h-16 w-16 hidden dark:block"
               :src="headerConfig.darkLogo"
-
               alt="Trader4 logo"
             />
             <!-- <span
@@ -33,7 +32,12 @@
               Trader4
             </span> -->
           </NuxtLink>
-          <form action="#" method="GET" class="hidden md:block lg:pl-2">
+          <form
+            action="#"
+            method="GET"
+            class="hidden md:block lg:pl-2"
+            v-show="!headerConfig.hideSearchBar"
+          >
             <label for="topbar-search" class="sr-only">Search</label>
             <div class="relative mt-1 lg:w-96">
               <div
@@ -94,10 +98,18 @@
           <NuxtLink
             v-if="!userData"
             to="/auth/sign"
-            class="sm:px-4 py-1 rounded sm:border ps-2 border-blue-600 text-blue-600 dark:text-gray-200 ms-3 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-all"
+            class="sm:px-4 sm:border border-blue-600 mx-2"
+            :class="headerConfig.loginButton.loginButtonClass"
+            v-show="!headerConfig.loginButton.hideLoginButton"
           >
-            <Icon name="mdi:account-circle-outline" size="23px" class="me-2" />
-            <span class="hidden sm:flex">Login</span>
+            <Icon
+              :name="headerConfig.loginButton.loginButtonIconName"
+              size="23px"
+              class="me-2"
+            />
+            <span class="hidden sm:flex">{{
+              headerConfig.loginButton.title
+            }}</span>
           </NuxtLink>
         </div>
 
@@ -135,5 +147,5 @@ onBeforeMount(() => {
 });
 
 // Links beside dark mode button
-const extraLinks = headerConfig.menu
+const extraLinks = headerConfig.menu;
 </script>
