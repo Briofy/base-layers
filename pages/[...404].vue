@@ -49,7 +49,7 @@
             <div>
               <button
                 type="submit"
-                class="py-3 px-5 w-full text-sm font-medium text-center bg-blue-700 text-white rounded cursor-pointer bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+                class="py-3 px-5 w-full text-sm font-medium text-center  text-white rounded cursor-pointer !bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
               >
                 Submit
               </button>
