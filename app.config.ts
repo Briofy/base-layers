@@ -44,6 +44,22 @@ interface IFooter {
     link: string;
   }[];
 }
+interface IAppCompanyMegaMenu {
+  plans: Plan[];
+  catergories: Category[];
+}
+
+interface Plan {
+  title: string;
+  description: string;
+  icon: string;
+  link: string;
+}
+
+interface Category {
+  title: string;
+  link: string;
+}
 interface IAnnouncement {
   title: string;
   badge: string;
@@ -53,27 +69,21 @@ interface ILink {
   text: string;
   src: string;
 }
-interface IUserData {
-  avatar: string;
-  firstName: string;
-  middleName: string;
-  lastName: string;
-  email: string;
-}
 interface IAppMenu {
   iconName: string;
   iconTitle: string;
   link: string;
 }
-interface UserAvatarMenu {
+interface IUserAvatarMenu {
   accountLinks: AccountLink[];
 }
-
 interface AccountLink {
   title: string;
   link: string;
 }
-export default defineAppConfig({
+
+
+export default defineAppConfig<any>({
   nuxtIcon: {
     // Default size
     // size: '2em',
@@ -130,10 +140,6 @@ export default defineAppConfig({
         src: "/",
       },
     } as IAnnouncement,
-    userData: {
-      avatar: "",
-    } as IUserData,
-
     appsMenu: [
       {
         iconName: "mdi-shopping",
@@ -177,11 +183,55 @@ export default defineAppConfig({
         link: "#",
       },
     ] as IAppMenu[],
+    appCompanyMegaMenu: {
+      plans: [
+        {
+          title: "Explore Design Work",
+          description: "Trending designs to inspire you",
+          icon: "mdi-folder-search",
+          link: "#",
+        },
+        {
+          title: "New & Noteworthy",
+          description: "Up-and-coming designers",
+          icon: "mdi-fire",
+          link: "#",
+        },
+        {
+          title: "Playoffs",
+          description: "Work designers are riffing on",
+          icon: "mdi-folder-multiple",
+          link: "#",
+        },
+        {
+          title: "Blog",
+          description: "Interviews, tutorials, and more",
+          icon: "mdi-cast",
+          link: "#",
+        },
+        {
+          title: "Weekly Warm-up",
+          description: "Prompt to flex your skills",
+          icon: "mdi-calendar",
+          link: "#",
+        },
+      ],
+
+      catergories: [
+        { title: "Animation", link: "#" },
+        { title: "Branding", link: "#" },
+        { title: "Illustration", link: "#" },
+        { title: "Mobile", link: "#" },
+        { title: "Print", link: "#" },
+        { title: "Product Design", link: "#" },
+        { title: "Web Design", link: "#" },
+      ],
+    } as IAppCompanyMegaMenu,
     userAvatarMenu: {
       accountLinks: [
         { title: "My profile", link: "#" },
         { title: "Account settings", link: "#" },
       ],
-    } as UserAvatarMenu,
+    } as IUserAvatarMenu,
   },
 });
