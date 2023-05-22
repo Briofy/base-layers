@@ -17,13 +17,11 @@
             <NuxtImg
               class="md:h-20 md:w-20 h-16 w-16 dark:hidden"
               :src="headerConfig.logo"
-              alt="Trader4 logo"
-            />
+              alt="Trader4 logo" />
             <NuxtImg
               class="md:h-20 md:w-20 h-16 w-16 hidden dark:block"
               :src="headerConfig.darkLogo"
-              alt="Trader4 logo"
-            />
+              alt="Trader4 logo" />
             <!-- <span
               class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
             >
@@ -34,8 +32,7 @@
             action="#"
             method="GET"
             class="hidden md:block lg:pl-2"
-            v-show="!headerConfig.hideSearchBar"
-          >
+            v-show="!headerConfig.hideSearchBar">
             <label for="topbar-search" class="sr-only">Search</label>
             <div class="relative mt-1 lg:w-96">
               <div
@@ -53,8 +50,7 @@
                 id="topbar-search"
                 class="bg-gray-50 border border-gray-300 rtl:px-9 text-gray-900 sm:text-sm rounded outline-none focus:ring-primary-500 focus:border-primary-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                 placeholder="Search (Ctrl+K)"
-                ref="searchInput"
-              />
+                ref="searchInput" />
             </div>
           </form>
         </div>
