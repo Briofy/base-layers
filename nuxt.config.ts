@@ -17,14 +17,15 @@ export default defineNuxtConfig({
       ],
     },
   },
-  runtimeConfig: {
-
-  },
+  extends: [
+    "@nuxt-themes/docus", // Extend from a npm package
+  ],
   modules: [
     "@nuxtjs/tailwindcss",
     "@nuxt/devtools",
     "nuxt-icon",
     "@nuxt/image-edge",
+    "@nuxt/content",
     [
       "@nuxtjs/color-mode",
       {
@@ -66,4 +67,18 @@ export default defineNuxtConfig({
       },
     ],
   ],
+  content: {
+    documentDriven: false,
+    highlight: {
+      // OR
+      theme: {
+        // Default theme (same as single string)
+        default: "github-light",
+        // Theme used if `html.dark`
+        dark: "github-dark",
+        // Theme used if `html.sepia`
+        sepia: "monokai",
+      },
+    },
+  },
 });
