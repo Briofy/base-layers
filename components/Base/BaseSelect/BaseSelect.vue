@@ -20,6 +20,7 @@
       <span
         class="w-full block border cursor-pointer p-2"
         v-for="(item, index) in props.items"
+        :key="item"
         @click="onItemClick(item)"
       >
         {{ item }}

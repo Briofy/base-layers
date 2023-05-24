@@ -9,6 +9,7 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
+    "@nuxt/content": "^2.6.0",
     "@nuxt/devtools": "^0.4.0",
     "@nuxt/image-edge": "^1.0.0-28020728.5df24eb",
     "@nuxtjs/color-mode": "^3.2.0",
@@ -18,6 +19,9 @@
     "nuxt-icon": "^0.3.3"
   },
   "dependencies": {
-    "flowbite": "^1.6.5"
+    "flowbite": "^1.6.5",
+    "@nuxt-themes/docus": "^1.11.1",
+    "vue-json-pretty": "^2.2.4",
+    "@vueuse/core": "^10.1.2"
   }
 }
