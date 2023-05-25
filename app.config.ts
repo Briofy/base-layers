@@ -1,3 +1,23 @@
+interface IAppConfig {
+  nuxtIcon: {
+    size?: string;
+    aliases?: {
+      [key: string]: string;
+    };
+  };
+  config: {
+    layout: {
+      container: boolean;
+    };
+    header: IHeader;
+    footer: IFooter;
+    announcement: IAnnouncement;
+    appsMenu: IAppMenu[];
+    appCompanyMegaMenu: IAppCompanyMegaMenu;
+    userAvatarMenu: IUserAvatarMenu;
+  };
+}
+
 interface IHeader {
   logo: string;
   darkLogo: string;
@@ -81,9 +101,7 @@ interface AccountLink {
   title: string;
   link: string;
 }
-
-
-export default defineAppConfig<any>({
+export default defineAppConfig({
   nuxtIcon: {
     // Default size
     // size: '2em',
@@ -92,6 +110,9 @@ export default defineAppConfig<any>({
     },
   },
   config: {
+    layout: {
+      container: true,
+    },
     header: {
       logo: "/img/briofy.png",
       darkLogo: "/img/briofy.png",

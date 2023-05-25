@@ -10,18 +10,20 @@
         :name="meta.name"
         :content="meta.content"
         v-for="(meta, index) in metaList"
-        :key="index" />
+        :key="index"
+      />
       <template v-for="link in head.link" :key="link.id">
         <Link
           :id="link.id"
           :rel="link.rel"
           :href="link.href"
-          :hreflang="link.hreflang" />
+          :hreflang="link.hreflang"
+        />
       </template>
     </Head>
 
     <Body class="dark:bg-gray-700 bg-gray-50">
-      <Header></Header>
+      <Header class="z-30"></Header>
 
       <main>
         <div>
@@ -30,7 +32,7 @@
         </div> -->
           <!-- <div :class="!sidebar ? 'md:flex-auto' : 'md:basis-5/6'"> -->
           <!-- Nuxt Pages -->
-          <div class="container mx-auto px-4 lg:my-10 my-5">
+          <div  :class="containerMode">
             <slot />
           </div>
           <!-- Nuxt Pages -->
@@ -42,8 +44,13 @@
   </Html>
 </template>
 <script lang="ts" setup>
-import sidebar from "../core/sidebar";
-import { PropType } from "vue";
+const layout = useAppConfig().config?.layout;
+const containerMode = computed(() => {
+  if (layout?.container) {
+    return "container px-4 md:px-0 md:mx-auto md:max-w-7xl mx-auto lg:my-10 my-5";
+  }
+  return "";
+});
 
 //route
 const route = useRoute();
