@@ -20,7 +20,7 @@
   },
   "dependencies": {
     "flowbite": "^1.6.5",
-    "@nuxt-themes/docus": "^1.11.1",
+    "@nuxt-themes/docus": "npx nuxi@latest init docs -t themes/docus",
     "vue-json-pretty": "^2.2.4",
     "@vueuse/core": "^10.1.2"
   }
