@@ -62,7 +62,7 @@
             </div>
             <button
               type="submit"
-              class="py-1 px-5 text-sm text-center text-white rounded-r rtl:rounded-l rtl:rounded-r-none border cursor-pointer bg-primary-600 border-primary-600 hover:bg-primary-700 focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
+              class="py-1 px-5 text-sm text-center text-white rounded-r rtl:rounded-l rtl:rounded-r-none border cursor-pointer !bg-primary-600 border-primary-600 hover:bg-primary-700 focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
               Subscribe
             </button>
           </form>
