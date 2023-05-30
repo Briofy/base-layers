@@ -1,10 +1,8 @@
 <template>
-  <nav
-    class="bg-white border-gray-200 px-4 lg:px-6 dark:bg-gray-800 md:block hidden"
-  >
-    <div class="py-3 px-4 mx-auto">
+  <nav class="bg-white border-gray-200 dark:bg-gray-800 md:block hidden">
+    <div class="py-3 container md:px-0 px-4 mx-auto">
       <div class="mx-auto">
-        <ul class="flex flex-row mt-0 mr-6 text-sm font-medium px-5">
+        <ul class="flex flex-row text-sm font-medium">
           <li
             v-for="(subNavItem, subNavIndex) in subNavLinks"
             :key="subNavIndex"
