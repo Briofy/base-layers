@@ -1,6 +1,6 @@
 <template>
   <footer class="bg-white dark:bg-gray-800 rounded">
-    <div class="md:p-0 p-4 container mx-auto">
+    <div class="md:pt-7 p-4 container mx-auto">
       <div class="md:flex grid justify-between grid-cols-2 lg:grid-cols-5">
         <!-- Links -->
         <div v-for="(footerItem, footerIndex) in footerConfig.footerLinks">
