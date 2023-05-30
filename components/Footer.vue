@@ -1,9 +1,7 @@
 <template>
   <footer class="bg-white dark:bg-gray-800 rounded">
     <div class="md:p-0 p-4 container mx-auto">
-      <div
-        class="md:flex grid justify-between md:p-4 p-0 grid-cols-2 lg:grid-cols-5"
-      >
+      <div class="md:flex grid justify-between grid-cols-2 lg:grid-cols-5">
         <!-- Links -->
         <div v-for="(footerItem, footerIndex) in footerConfig.footerLinks">
           <h2 class="mb-6 text-sm font-semibold text-gray-900 dark:text-white">
@@ -82,7 +80,7 @@
           class="lg:my-8 my-6 border-gray-200 sm:mx-auto dark:border-gray-700"
         />
         <div
-          class="my-4 grid grid-cols-3 sm:space-y-0 space-y-2 justify-between"
+          class="pb-5 grid grid-cols-3 sm:space-y-0 space-y-2 justify-between"
         >
           <div class="col-span-full sm:col-span-2 lg:col-span-1 order-1">
             <div class="flex mt-1 lg:mt-0 justify-center sm:justify-start">

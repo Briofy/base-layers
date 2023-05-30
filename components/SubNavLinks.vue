@@ -3,7 +3,7 @@
     class="bg-white border-gray-200 px-4 lg:px-6 dark:bg-gray-800 md:block hidden"
   >
     <div class="py-3 px-4 mx-auto">
-      <div class="container md:px-0 md:mx-auto md:max-w-7xl mx-auto">
+      <div class="mx-auto">
         <ul class="flex flex-row mt-0 mr-6 text-sm font-medium px-5">
           <li
             v-for="(subNavItem, subNavIndex) in subNavLinks"
@@ -85,19 +85,6 @@
 
 <script setup lang="ts">
 const localepath = useLocalePath();
-
 // Sub Nav Links
-const subNavLinks = ref([
-  { title: "Finance", link: "/my/finance", icon: "mdi:finance" },
-  {
-    title: "Products",
-    link: "/my/products",
-    icon: "mdi:package-variant-closed",
-  },
-  {
-    title: "Trading Accounts",
-    link: "/my/finance/transactions",
-    icon: "mdi:account-settings-variant",
-  },
-]);
+const subNavLinks = ref(useAppConfig().config.header.subnavLinks);
 </script>

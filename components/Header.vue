@@ -127,7 +127,7 @@
       </div>
       <!-- MobileHeader Component  -->
       <MobileHeader />
-      <SubNavLinks v-if="userData" />
+      <SubNavLinks v-if="userData && !headerConfig.hideSubnavLink" />
     </nav>
   </header>
 </template>

@@ -25,7 +25,13 @@ interface IHeader {
     title: string;
     link: string;
   }[];
+  subnavLinks?: {
+    icon: string;
+    title: string;
+    link: string;
+  }[];
   megaMenu: boolean | string[];
+  hideSubnavLink?: boolean;
   hideSearchBar: boolean;
   hideLanguageSelector: boolean;
   hideNotifications: boolean;
@@ -124,6 +130,7 @@ export default defineAppConfig({
       hideThemeSelector: false,
       hideNotifications: false,
       hideappMenu: false,
+      hideSubnavLink: false,
       hideUserInfo: false,
       loginButton: {
         title: "Login",
