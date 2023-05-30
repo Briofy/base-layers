@@ -82,5 +82,5 @@ module.exports = {
     borderColor: ["dark", "dark-focus", "dark-focus-within"],
     textColor: ["dark", "dark-hover", "dark-active"],
   },
-  plugins: [require("flowbite")],
+  plugins: [require("flowbite"), require("flowbite-typography")],
 };
