@@ -1,7 +1,9 @@
 <template>
   <header id="main-header" class="sticky z-20 top-0">
     <Announcement />
-    <nav class="bg-white border-gray-200 px-4 py-1 dark:bg-gray-800">
+    <nav
+      class="bg-white border-b border-gray-200 dark:border-gray-700 px-4 dark:bg-gray-800"
+    >
       <div class="flex justify-between container mx-auto">
         <div class="flex justify-start items-center">
           <!-- <button id="toggleSidebar" @click="sidebar = !sidebar"

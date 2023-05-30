@@ -1,6 +1,6 @@
 <template>
   <div
-    class="items-center row hidden w-full md:flex md:w-auto pb-3 md:order-1"
+    class="items-center row hidden w-full md:flex md:w-auto md:order-1"
     id="search-bar"
   >
     <div class="relative mt-3 md:hidden">
@@ -38,7 +38,7 @@
     <ul
       id="accordion-color"
       data-accordion="collapse"
-      class="flex md:hidden flex-col p-4 md:p-0 mt-4 font-medium border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+      class="flex md:hidden flex-col md:p-0 my-4 font-medium border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
     >
       <li
         v-for="(extraLinkItem, extraLinkIndex) in mobileLinks"
@@ -113,7 +113,7 @@
       id="navbar-search"
     >
       <ul
-        class="flex md:hidden flex-col p-4 md:p-0 mt-4 font-medium border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+        class="flex md:hidden flex-col md:p-0 my-4 font-medium border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
       >
         <li
           v-for="(extraLinkItem, extraLinkIndex) in mobileLinks"
