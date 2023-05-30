@@ -1,8 +1,8 @@
 <template>
   <header id="main-header" class="sticky z-20 top-0">
     <Announcement />
-    <nav class="bg-white border-gray-200 px-4 lg:px-6 py-1 dark:bg-gray-800">
-      <div class="flex justify-between">
+    <nav class="bg-white border-gray-200 px-4 py-1 dark:bg-gray-800">
+      <div class="flex justify-between container mx-auto">
         <div class="flex justify-start items-center">
           <!-- <button id="toggleSidebar" @click="sidebar = !sidebar"
             class="p-2 text-gray-600 rounded cursor-pointer lg:inline hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-700">
