@@ -32,7 +32,7 @@
         </div> -->
           <!-- <div :class="!sidebar ? 'md:flex-auto' : 'md:basis-5/6'"> -->
           <!-- Nuxt Pages -->
-          <div  :class="containerMode">
+          <div :class="containerMode">
             <slot />
           </div>
           <!-- Nuxt Pages -->
@@ -47,7 +47,7 @@
 const layout = useAppConfig().config?.layout;
 const containerMode = computed(() => {
   if (layout?.container) {
-    return "container px-4 md:px-0 md:mx-auto md:max-w-7xl mx-auto lg:my-10 my-5";
+    return "container px-4 md:px-0 mx-auto lg:my-10 my-5";
   }
   return "";
 });
