@@ -10,7 +10,6 @@
   },
   "devDependencies": {
     "@nuxt/content": "^2.6.0",
-    "@nuxt/devtools": "^0.4.0",
     "@nuxt/image-edge": "^1.0.0-28020728.5df24eb",
     "@nuxtjs/color-mode": "^3.2.0",
     "@nuxtjs/i18n": "8.0.0-beta.10",
@@ -20,7 +19,7 @@
   },
   "dependencies": {
     "flowbite": "^1.6.5",
-    "@nuxt-themes/docus": "npx nuxi@latest init docs -t themes/docus",
+    "@nuxt-themes/docus": "1.12.0",
     "vue-json-pretty": "^2.2.4",
     "@vueuse/core": "^10.1.2"
   }

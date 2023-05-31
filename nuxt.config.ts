@@ -22,7 +22,6 @@ export default defineNuxtConfig({
   ],
   modules: [
     "@nuxtjs/tailwindcss",
-    "@nuxt/devtools",
     "nuxt-icon",
     "@nuxt/image-edge",
     "@nuxt/content",
