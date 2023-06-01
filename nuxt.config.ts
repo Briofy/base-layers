@@ -1,7 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 
 export default defineNuxtConfig({
-  ssr: true,
+  ssr: false,
   app: {
     head: {
       meta: [
@@ -22,7 +22,6 @@ export default defineNuxtConfig({
   ],
   modules: [
     "@nuxtjs/tailwindcss",
-    "@nuxt/devtools",
     "nuxt-icon",
     "@nuxt/image-edge",
     "@nuxt/content",
