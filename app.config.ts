@@ -257,8 +257,8 @@ export default defineAppConfig({
     } as IAppCompanyMegaMenu,
     userAvatarMenu: {
       accountLinks: [
-        { title: "My profile", link: "#" },
-        { title: "Account settings", link: "#" },
+        { title: "Profile", link: "my/profile" },
+        { title: "Setting", link: "my/profile/setting" },
       ],
     } as IUserAvatarMenu,
   },

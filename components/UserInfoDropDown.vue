@@ -53,57 +53,14 @@
           :key="item.title"
           :href="item.link"
           class="block py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"
-          >{{ item.title }}</a
-        >
-      </li>
-    </ul>
-    <ul
-      class="py-1 font-light text-gray-500 dark:text-gray-400"
-      aria-labelledby="dropdown"
-    >
-      <li>
-        <a
-          href="#"
-          class="flex items-center py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-        >
+          >
           <Icon
-            name="mdi-cards-heart"
-            class="mr-2 rtl:ml-2 w-5 h-5 text-gray-400"
+            :name="item.icon ?? 'mdi:chevron-right'"
+            class="w-5 h-5 text-gray-400"
           />
-          My likes</a
+          {{ item.title }}
+          </a
         >
-      </li>
-      <li>
-        <a
-          href="#"
-          class="flex items-center py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-        >
-          <Icon
-            name="mdi-folder-multiple"
-            class="mr-2 rtl:ml-2 w-5 h-5 text-gray-400"
-          />
-
-          Collections</a
-        >
-      </li>
-      <li>
-        <a
-          href="#"
-          class="flex justify-between items-center py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-        >
-          <span class="flex items-center">
-            <Icon
-              name="mdi-fire"
-              class="mr-2 rtl:ml-2 w-5 h-5 text-blue-600 dark:text-blue-500"
-            />
-
-            Pro version
-          </span>
-          <Icon
-            name="mdi-chevron-right"
-            class="w-5 h-5 rtl:rotate-180 text-gray-400"
-          />
-        </a>
       </li>
     </ul>
     <ul
