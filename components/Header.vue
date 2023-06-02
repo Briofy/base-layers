@@ -78,7 +78,7 @@
 
             <template v-if="userData">
               <!-- Notification -->
-              <NotificationsDropDown />
+              <NotificationsDropDown  v-if="!headerConfig.hideNotifications"/>
 
               <!-- Applications -->
               <ApplicationsDropDown />
