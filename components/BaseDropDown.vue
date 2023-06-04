@@ -26,6 +26,7 @@
           active-class="!text-blue-700 dark:!text-blue-500 border-b-2 border-blue-600 
               dark:border-blue-500"
         >
+          <Icon :name="subItem.icon" class="me-1" />
           {{ subItem.title }}
         </a>
       </li>
