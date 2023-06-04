@@ -9,6 +9,7 @@
             class="me-8"
           >
             <NuxtLink
+              v-if="!subNavItem.submenu"
               :to="localepath(subNavItem.link)"
               class="py-4 hover:text-blue-700 text-gray-600 dark:text-gray-300 hover:border-b-2 border-blue-600 dark:hover:text-white dark:border-blue-500"
               aria-current="page"
@@ -18,7 +19,12 @@
               <Icon :name="subNavItem.icon" class="-mt-1" size="16" />
               {{ subNavItem.title }}
             </NuxtLink>
-            <BaseDropDown v-if="subNavItem.submenu" />
+            <BaseDropDown
+              v-else
+              :icon="subNavItem.icon"
+              :title="subNavItem.title"
+              :submenu="subNavItem.submenu"
+            />
           </li>
         </ul>
       </div>
