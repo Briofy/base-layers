@@ -12,7 +12,7 @@
   <div
     v-show="showDropDown"
     :id="`dropdown-${title}`"
-    class="z-10 absolute left-0 top-8 bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
+    class="z-10 absolute left-0 top-8 bg-white divide-y divide-gray-100 rounded-lg shadow w-48 dark:bg-gray-700"
   >
     <ul
       class="py-2 text-sm text-gray-700 dark:text-gray-200"
@@ -26,7 +26,7 @@
           active-class="!text-blue-700 dark:!text-blue-500 border-b-2 border-blue-600 
               dark:border-blue-500"
         >
-          <Icon :name="subItem.icon" class="me-1" />
+          <Icon v-if="subItem.icon" :name="subItem.icon" class="me-1" />
           {{ subItem.title }}
         </a>
       </li>
