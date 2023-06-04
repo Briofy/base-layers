@@ -6,7 +6,7 @@
           <li
             v-for="(subNavItem, subNavIndex) in subNavLinks"
             :key="subNavIndex"
-            class="me-8"
+            class="me-8 relative"
           >
             <NuxtLink
               v-if="!subNavItem.submenu"
@@ -16,7 +16,11 @@
               active-class="!text-blue-700 dark:!text-blue-500 border-b-2 border-blue-600 
               dark:border-blue-500"
             >
-              <Icon :name="subNavItem.icon" class="-mt-1" size="16" />
+              <Icon
+                :name="(subNavItem.icon as string)"
+                class="-mt-1"
+                size="16"
+              />
               {{ subNavItem.title }}
             </NuxtLink>
             <BaseDropDown
