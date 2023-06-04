@@ -29,6 +29,11 @@ interface IHeader {
     icon: string;
     title: string;
     link: string;
+    submenu?: {
+      icon: string;
+      title: string;
+      link: string;
+    }[];
   }[];
   megaMenu: boolean | string[];
   hideSubnavLink?: boolean;
