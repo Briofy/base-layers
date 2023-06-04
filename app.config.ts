@@ -18,6 +18,13 @@ interface IAppConfig {
   };
 }
 
+interface IHeaderLinks {
+  icon?: string;
+  title: string;
+  link: string;
+  submenu?: IHeaderLinks;
+}
+
 interface IHeader {
   logo: string;
   darkLogo: string;
@@ -25,16 +32,7 @@ interface IHeader {
     title: string;
     link: string;
   }[];
-  subnavLinks?: {
-    icon: string;
-    title: string;
-    link: string;
-    submenu?: {
-      icon: string;
-      title: string;
-      link: string;
-    }[];
-  }[];
+  subnavLinks?: IHeaderLinks[];
   megaMenu: boolean | string[];
   hideSubnavLink?: boolean;
   hideSearchBar: boolean;
