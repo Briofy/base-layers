@@ -2,6 +2,11 @@
   <a
     :id="`sub-${title}`"
     class="py-4 hover:text-blue-700 text-gray-600 dark:text-gray-300 hover:border-b-2 border-blue-600 dark:hover:text-white dark:border-blue-500"
+    :class="
+      route.path.includes(link)
+        ? '!dark:border-blue-500 !border-b-2 !border-blue-600'
+        : ''
+    "
   >
     <button @click="toggleDropDown" @blur="closeDropDown">
       <Icon :name="icon" />
@@ -37,11 +42,15 @@
 <script setup lang="ts">
 const localePath = useLocalePath();
 const router = useRouter();
+const route = useRoute();
 const props = defineProps<{
   title: string;
-  icon: string;
+  icon?: string;
+  link: string;
   submenu: [] | any;
 }>();
+
+console.log(route);
 
 const showDropDown = ref(false);
 const changeRoute = (link: string) => {

@@ -26,6 +26,7 @@
             <BaseDropDown
               v-else
               :icon="subNavItem.icon"
+              :link="subNavItem.link"
               :title="subNavItem.title"
               :submenu="subNavItem.submenu"
             />
