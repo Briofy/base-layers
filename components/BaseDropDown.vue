@@ -50,8 +50,6 @@ const props = defineProps<{
   submenu: [] | any;
 }>();
 
-console.log(route);
-
 const showDropDown = ref(false);
 const changeRoute = (link: string) => {
   router.push(localePath(link));
